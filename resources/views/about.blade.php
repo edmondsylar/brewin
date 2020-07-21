@@ -189,7 +189,9 @@
             @foreach ($sponsers as $sponser)
                 <div class="col-md-4">
                   <div class="media block-6">
-                    <div class="icon"><span class="ion-ios-bulb"></span></div>
+                    <div class="icon">
+                      <img src="images/{{ $sponser->image }}" alt="Product Image" width="85px" height="auto">
+                    </div>
                     <div class="media-body">
                       <h3 class="heading">{{ $sponser->name }}</h3>
                       <p>

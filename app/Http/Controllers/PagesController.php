@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Blog;
 use App\FundRaiser;
 use App\Sponsor;
+use App\Gallery;
 
 
 class PagesController extends Controller
@@ -14,9 +15,23 @@ class PagesController extends Controller
     public function index(){
 
         $fundraisers = FundRaiser::orderby('id', 'asc')->paginate(12);
-        $blogs = Blog::orderBy('created_at', 'desc')->paginate(3); 
+        $blogs = Blog::orderBy('created_at', 'desc')->paginate(3);
+        $slider = Gallery::all()->take(10);
 
-        return view('index', compact('fundraisers',$fundraisers, 'blogs',$blogs));
+        return view('index')
+            ->with('slider', $slider)
+            ->with('fundraisers', $fundraisers)
+            ->with('blogs', $blogs);
+
+    }
+
+    public function gallery(){
+        
+        $gallery = Gallery::orderBy('created_at', 'desc')->paginate(10);
+        $slider = Gallery::all();
+        return view('gallery')
+            ->with('gallery', $gallery)
+            ->with('slider', $slider);
     }
 
     
@@ -42,9 +57,11 @@ class PagesController extends Controller
         
         return view('donate');
     }
-    public function details(){
-
-        return view('details');
+    public function details($id){
+        $post = Blog::find($id);
+        
+        return view('details')
+            ->with('post', $post);
     }
 
 

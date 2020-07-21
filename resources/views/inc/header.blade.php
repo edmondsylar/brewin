@@ -9,8 +9,8 @@
         <ul class="navbar-nav ml-auto">
           <li class="nav-item"><a href="{{ url('/') }}" class="nav-link">Home</a></li>
           <li class="nav-item"><a href="{{ url('/news') }}" class="nav-link">Blog</a></li>
+          <li class="nav-item"><a href="{{ url('/events') }}" class="nav-link">Gallery</a></li>
           <li class="nav-item"><a href="{{ url('/about') }}" class="nav-link">About Us</a></li>
-          {{-- <li class="nav-item"><a href="{{ url('/donate') }}" class="nav-link">Donate</a></li> --}}
           <li class="nav-item"><a href="{{ url('/contact') }}" class="nav-link">Contact us</a></li>
           {{-- <li class="nav-item"><a href="{{ url('/login') }}" class="nav-link">Login</a></li> --}}
         </ul>

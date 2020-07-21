@@ -10,10 +10,10 @@ a {
   -webkit-transition: .3s all ease;
   -o-transition: .3s all ease;
   transition: .3s all ease;
-  color: #F7CA44; }
+  color: #FFCB01; }
   a:hover {
     text-decoration: none;
-    color: #F7CA44; }
+    color: #FFCB01; }
   a.link-underline {
     text-decoration: underline; }
     a.link-underline:hover {
@@ -26,7 +26,7 @@ h1, h2, h3, h4, h5,
   font-family: "Dosis", sans-serif; }
 
 .text-primary {
-  color: #F7CA44 !important; }
+  color: #FFCB01 !important; }
 
 .ftco-navbar-light {
   background: transparent !important;
@@ -84,7 +84,7 @@ h1, h2, h3, h4, h5,
       padding: 10px 20px;
       border-radius: 4px; }
   .ftco-navbar-light .navbar-nav > .nav-item.cta.cta-colored span {
-    border-color: #F7CA44; }
+    border-color: #FFCB01; }
   .ftco-navbar-light .navbar-nav > .nav-item.active > a {
     color: #fff;
     position: relative; }
@@ -117,7 +117,7 @@ h1, h2, h3, h4, h5,
     -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1); }
     .ftco-navbar-light.scrolled .nav-item.active > a {
-      color: #F7CA44 !important; }
+      color: #FFCB01 !important; }
       .ftco-navbar-light.scrolled .nav-item.active > a:before {
         display: none; }
     @media (max-width: 991.98px) {
@@ -145,7 +145,7 @@ h1, h2, h3, h4, h5,
       padding-bottom: 0.9rem !important;
       color: #000 !important; }
       .ftco-navbar-light.scrolled .nav-link.active {
-        color: #F7CA44 !important; }
+        color: #FFCB01 !important; }
     .ftco-navbar-light.scrolled.awake {
       margin-top: 0px;
       -webkit-transition: .3s all ease-out;
@@ -278,7 +278,7 @@ h1, h2, h3, h4, h5,
     .block-41 .block-41-subheading > div.block-41-line {
       height: 2px;
       width: 50px;
-      background: #F7CA44; }
+      background: #FFCB01; }
 
 .block-41 .block-41-heading {
   line-height: 1.2; }
@@ -288,7 +288,7 @@ h1, h2, h3, h4, h5,
     font-size: 20px; } }
 
 .block-48 {
-  background: #F7CA44;
+  background: #FFCB01;
   padding: 50px;
   color: #000; }
   .block-48 .block-48-text-1 {
@@ -343,22 +343,22 @@ h1, h2, h3, h4, h5,
       background: #000;
       color: #fff; }
   .btn.btn-primary {
-    background: #F7CA44;
-    border: 2px solid #F7CA44;
+    background: #FFCB01;
+    border: 2px solid #FFCB01;
     color: #fff; }
     .btn.btn-primary:hover {
-      border: 2px solid #F7CA44;
+      border: 2px solid #FFCB01;
       background: transparent;
-      color: #F7CA44; }
+      color: #FFCB01; }
     .btn.btn-primary:active, .btn.btn-primary:focus {
       color: #fff !important; }
     .btn.btn-primary.btn-outline-primary {
-      border: 2px solid #F7CA44;
+      border: 2px solid #FFCB01;
       background: transparent;
-      color: #F7CA44; }
+      color: #FFCB01; }
       .btn.btn-primary.btn-outline-primary:hover {
         border: 2px solid transparent;
-        background: #F7CA44;
+        background: #FFCB01;
         color: #000; }
   .btn.btn-outline-white {
     border-color: rgba(255, 255, 255, 0.8);
@@ -453,7 +453,7 @@ textarea.form-control {
       bottom: 0;
       left: 0;
       padding: 10px 20px;
-      background: #F7CA44;
+      background: #FFCB01;
       color: #fff;
       font-size: 14px;
       -webkit-transition: .3s all ease;
@@ -473,7 +473,7 @@ textarea.form-control {
     .post-entry h3 a {
       color: #000; }
       .post-entry h3 a:hover {
-        color: #F7CA44; }
+        color: #FFCB01; }
   .post-entry p {
     color: #999999; }
 
@@ -514,7 +514,9 @@ textarea.form-control {
       bottom: 0;
       opacity: .9; }
   .featured-donate.overlay-color-2:before, .featured-section.overlay-color-2:before {
-    background: #F7CA44; }
+    background: #7E0B80;
+    /* background: #FFCB01; */
+   }
 
 .form-volunteer h2 {
   font-size: 25px;
@@ -596,7 +598,7 @@ textarea.form-control {
   .fundraise-item a {
     color: #000; }
     .fundraise-item a:hover {
-      color: #F7CA44; }
+      color: #FFCB01; }
   .fundraise-item .donation-time {
     color: #ccc;
     display: block;
@@ -610,7 +612,7 @@ textarea.form-control {
   visibility: hidden; }
 
 .bg-primary {
-  background: #F7CA44 !important; }
+  background: #FFCB01 !important; }
 
 .site-section {
   padding: 4em 0; }
@@ -635,15 +637,15 @@ textarea.form-control {
   .footer .block-21 .heading a {
     color: #fff !important; }
     .footer .block-21 .heading a:hover {
-      color: #F7CA44 !important; }
+      color: #FFCB01 !important; }
   .footer .block-21 .meta a {
     color: gray !important; }
     .footer .block-21 .meta a:hover {
       color: #fff !important; }
   .footer a {
-    color: #F7CA44; }
+    color: #FFCB01; }
     .footer a:hover {
-      color: #F7CA44 !important; }
+      color: #FFCB01 !important; }
 
 .ftco-footer-social li {
   list-style: none;
@@ -666,14 +668,14 @@ textarea.form-control {
       -ms-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%); }
     .ftco-footer-social li a:hover {
-      color: #F7CA44; }
+      color: #FFCB01; }
 
 .footer-small-nav > li {
   display: inline-block; }
   .footer-small-nav > li a {
     margin: 0 10px 10px 0; }
     .footer-small-nav > li a:hover, .footer-small-nav > li a:focus {
-      color: #F7CA44; }
+      color: #FFCB01; }
 
 #map {
   height: 400px;
@@ -694,7 +696,7 @@ textarea.form-control {
   right: 0;
   margin-right: -50px;
   border-radius: 50%;
-  background: #F7CA44;
+  background: #FFCB01;
   z-index: 100;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -754,7 +756,7 @@ textarea.form-control {
 
 .section-2-blocks-wrapper-2 .quote {
   background: #97DE95;
-  background: #F7CA44;
+  background: #FFCB01;
   color: #000;
   width: 100%;
   font-size: 24px;
@@ -940,7 +942,7 @@ textarea.form-control {
   display: block;
   font-size: 72px;
   font-weight: bold;
-  color: #F7CA44; }
+  color: #FFCB01; }
 
 .ftco-counter .ftco-label {
   font-size: 12px;
@@ -985,7 +987,7 @@ textarea.form-control {
   .block-21 .text .heading a {
     color: #000; }
     .block-21 .text .heading a:hover, .block-21 .text .heading a:active, .block-21 .text .heading a:focus {
-      color: #F7CA44; }
+      color: #FFCB01; }
 
 .block-21 .text .meta > div {
   display: inline-block;
@@ -1077,7 +1079,7 @@ textarea.form-control {
 
 .block-6 .icon {
   margin-right: 30px;
-  color: #F7CA44; }
+  color: #FFCB01; }
   .block-6 .icon span:before {
     font-size: 50px; }
   .block-6 .icon span.bg-after:after {
@@ -1201,9 +1203,9 @@ textarea.form-control {
       -webkit-transition: .3s all ease;
       -o-transition: .3s all ease;
       transition: .3s all ease;
-      background: #F7CA44;
+      background: #FFCB01;
       color: #fff;
-      border: 1px solid #F7CA44; }
+      border: 1px solid #FFCB01; }
     .block-8 .accordion-item .heading > a[aria-expanded="false"]:before {
       content: "\e313";
       color: #ccc;
@@ -1264,7 +1266,7 @@ textarea.form-control {
     -o-transition: .3s all ease;
     transition: .3s all ease; }
     .block-4 .nonloop .owl-dots .owl-dot.active {
-      background: #F7CA44; }
+      background: #FFCB01; }
 
 .contact-section {
   margin-top: -250px; }
@@ -1303,7 +1305,7 @@ textarea.form-control {
     margin: 0;
     border-radius: 50% !important;
     font-size: 16px;
-    background: #F7CA44;
+    background: #FFCB01;
     color: #fff; }
     .custom-pagination li.active a:hover, .custom-pagination li.active a:focus, .custom-pagination .prev.active a:hover, .custom-pagination .prev.active a:focus, .custom-pagination .next.active a:hover, .custom-pagination .next.active a:focus {
       color: #fff; }
@@ -1624,7 +1626,7 @@ textarea.form-control {
   width: 40px;
   font-size: 18px;
   padding-top: 2px;
-  color: #F7CA44; }
+  color: #FFCB01; }
 
 .img-hover {
   position: relative;
@@ -1642,7 +1644,7 @@ textarea.form-control {
     right: 0;
     bottom: 0;
     z-index: 1;
-    background: #F7CA44;
+    background: #FFCB01;
     opacity: 0;
     visibility: hidden;
     content: "";
@@ -1733,8 +1735,8 @@ textarea.form-control {
       .block-35 .nav li a:hover {
         color: #000; }
       .block-35 .nav li a.active {
-        color: #F7CA44;
-        border-bottom: 2px solid #F7CA44; }
+        color: #FFCB01;
+        border-bottom: 2px solid #FFCB01; }
 
 .block-33 {
   background: #fff;
@@ -1834,7 +1836,7 @@ textarea.form-control {
   #blog .block-3 .heading a {
     color: #000; }
     #blog .block-3 .heading a:hover {
-      color: #F7CA44; }
+      color: #FFCB01; }
 
 #blog .block-3 .meta {
   font-size: 16px;

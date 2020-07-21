@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\FundRaiser;
 use App\Blog;
 use App\Sponsor;
+use App\Gallery;
 
 class HomeController extends Controller
 {
@@ -37,6 +38,14 @@ class HomeController extends Controller
         ));
     }
 
+    public function gallery()
+    {
+        $slider = Gallery::orderBy('id', 'desc')->take(15);
+
+        return view('gallery')
+            ->with('slider', $slider);
+    }
+
     public function all(){
 
         return view('admin.all');
@@ -45,6 +54,12 @@ class HomeController extends Controller
     public function createBlog(Request $request){
 
         $blog = new Blog;
+
+        $image = $request->file('image');
+        $input['imagename'] = time() . '.' . $image->getClientOriginalExtension();
+        $destinationPath = public_path('/images');
+        $image->move($destinationPath, $input['imagename']);
+
         $blog->image= $request->input('image');
         $blog->title= $request->input('title');
         $blog->content= $request->input('content');
@@ -54,12 +69,16 @@ class HomeController extends Controller
 
     public function sponser(Request $request){
 
+        $imageName = time() . '.' . $request->image->extension();
+        $request->image->move(public_path('images'), $imageName);
+
         $sponser = new Sponsor;
         $sponser->name = $request->input('name');
+        $sponser->image = $imageName;
         $sponser->description = $request->input('description');
         
         if($sponser->save()){
-            return redirect('/all');
+            return redirect('/sponsers');
         }else{
 
         }

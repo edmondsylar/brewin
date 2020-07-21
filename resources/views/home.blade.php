@@ -1,133 +1,74 @@
 @extends('layouts.admin')
 @section('content')
-   <div class="row">
+    <section class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1>Dashboard</h1>
+          </div>
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="{{ url('/home') }}">Home</a></li>
+              <li class="breadcrumb-item active">Brewin Foundation</li>
+            </ol>
+          </div>
+        </div>
+      </div><!-- /.container-fluid -->
+    </section>
 
-    <div class="col-lg-3 col-md-6 col-sm-6">
-        <div class="card card-stats">
-        <div class="card-header card-header-warning card-header-icon">
-            <div class="card-icon">
-            <i class="material-icons">content_copy</i>
+    <section class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12 col-sm-4">
+            <div class="info-box">
+              <span class="info-box-icon bg-info elevation-1"><i class="fas fa-cog"></i></span>
+
+              <div class="info-box-content">
+                <h5 class="info-box-text">Header Images</h5>
+                <form action="{{ url('/settings/header') }}" method="post" enctype="multipart/form-data">
+                  @csrf
+                  <div class="form-group">
+                    <select class="form-control" name="title" id="" >
+                      <option value="home">home header</option>
+                      <option value="contact">Contact Us header</option>
+                      <option value="blogs">News | blogs header</option>
+                      <option value="events">gallery header</option>
+                      <option value="about">about us header</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <input type="file" class="form-control-file" name="image">
+                  </div>
+
+                  <div class="form-group">
+                    <input type="submit" class="btn btn-sm btn-primary" value="update">
+                  </div>
+                </form>
+              </div>
+              <!-- /.info-box-content -->
             </div>
-            <p class="card-category">Articles</p>
-            <h3 class="card-title"> {{ count($blogs) }}
-            <small></small>
-            </h3>
-        </div>
-        <div class="card-footer">
-            <div class="stats">
-            <i class="material-icons text-success">add</i>
-            <a href="{{ url('/all') }}">Create Article</a>
+            <!-- /.info-box -->
+          </div>
+          <!-- /.col -->
+          <div class="col-12 col-sm-6 col-md-3">
+            <div class="info-box mb-3">
+              <span class="info-box-icon bg-danger elevation-1"><i class="fas fa-color"></i></span>
+
+              <div class="info-box-content">
+                <span class="info-box-text">System Colors</span>
+                <span class="info-box-number"><code>under development</code></span>
+              </div>
+              <!-- /.info-box-content -->
             </div>
+            <!-- /.info-box -->
+          </div>
+          <!-- /.col -->
+          <div class="clearfix hidden-md-up"></div>
+
         </div>
-        </div>
-    </div>
+      </div>
+    </section>
     
-    <div class="col-lg-3 col-md-6 col-sm-6">
-        <div class="card card-stats">
-        <div class="card-header card-header-warning card-header-icon">
-            <div class="card-icon">
-            <i class="material-icons">content_copy</i>
-            </div>
-            <p class="card-category">Fund raisers</p>
-            <h3 class="card-title">{{ count($fundraiser) }}
-            <small></small>
-            </h3>
-        </div>
-        <div class="card-footer">
-            <div class="stats">
-            <i class="material-icons text-success">add</i>
-            <a href="{{ url('/all') }}">Add Fund Raiser</a>
-            </div>
-        </div>
-        </div>
-    </div>
-    
-    <div class="col-lg-3 col-md-6 col-sm-6">
-        <div class="card card-stats">
-        <div class="card-header card-header-warning card-header-icon">
-            <div class="card-icon">
-            <i class="material-icons">content_copy</i>
-            </div>
-            <p class="card-category">Partners</p>
-            <h3 class="card-title">{{ count($sponser) }}
-            <small></small>
-            </h3>
-        </div>
-        <div class="card-footer">
-            <div class="stats">
-            <i class="material-icons text-success">add</i>
-            <a href="{{ url('/all') }}">Add Fund Raiser</a>
-            </div>
-        </div>
-        </div>
-    </div>
-</div>
 
-<div class="row">
-
-    <div class="col-lg-6 col-md-12">
-        <div class="card">
-            <div class="card-header card-header-warning">
-                <h4 class="card-title">Partners</h4>
-                <p class="card-category">Brewin Foundation Patners</p>
-            </div>
-            <div class="card-body table-responsive">
-                <table class="table table-hover">
-                <thead class="text-warning">
-                    <th>ID</th>
-                    <th>Sponser</th>
-                    <th>Registered</th>
-                </thead>
-                <tbody>
-                    @if (count($sponser) > 0)
-                        @foreach ($sponser as $item)
-                            <tr>
-                                <td>{{ $item->id }}</td>
-                                <td>{{ $item->name }}</td>
-                                <td>{{ $item->created_at }}</td>
-                            </tr>
-                        @endforeach
-                    {{ $sponser->links() }}
-                    @endif
-                </tbody>
-                </table>
-            </div>
-            </div>
-        </div>
-    <div class="col-lg-6 col-md-12">
-        <div class="card">
-            <div class="card-header card-header-warning">
-                <h4 class="card-title">Fund Raisers</h4>
-                <p class="card-category">All Fund raisers registered in the system</p>
-            </div>
-            <div class="card-body table-responsive">
-                <table class="table table-hover">
-                <thead class="text-warning">
-                    <th>ID</th>
-                    <th>Fundraiser</th>
-                    <th>Amount Collected</th>
-                    <th>Registered</th>
-                </thead>
-                <tbody>
-                    @if (count($fundraiser) > 0)
-                        @foreach ($fundraiser as $item)
-                        <tr>
-                            <td>{{ $item->id }}</td>
-                            <td>{{ $item->title }}</td>
-                            <td>{{ $item->donation }}</td>
-                            <td>{{ $item->created_at }}</td>
-                        </tr>
-                        @endforeach
-                        
-                    @endif
-                        {{ $fundraiser->links() }}
-                </tbody>
-                </table>
-            </div>
-            </div>
-        </div>
-
-
-</div>
     
 @endsection

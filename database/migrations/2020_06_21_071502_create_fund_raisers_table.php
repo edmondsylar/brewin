@@ -17,7 +17,7 @@ class CreateFundRaisersTable extends Migration
             $table->id();
             $table->timestamps();
             $table->string('title');
-            $table->string('donation');
+            $table->string('donation')->nullable();
             $table->string('description');
         });
     }

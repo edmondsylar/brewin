@@ -2,17 +2,21 @@
 @section('content')
 <div class="block-31" style="position: relative;">
     <div class="owl-carousel loop-block-31 ">
-      <div class="block-30 block-30-sm item" style="background-image: url('https://i.pinimg.com/564x/b2/0f/08/b20f08b843435383d4e183337032b80b.jpg');" data-stellar-background-ratio="0.5">
-        <div class="container">
-          <div class="row align-items-center justify-content-center text-center">
-            <div class="col-md-7">
-              <h2 class="heading mb-5">Providing a safe heaven for children</h2>
-              <p style="display: inline-block;"><a href="#"  data-fancybox class="ftco-play-video d-flex"><span class="play-icon-wrap align-self-center mr-4"><span class="ion-ios-play"></span></span> <span class="align-self-center">Watch Video</span></a></p>
-            </div>
-          </div>
-        </div>
-      </div>
-      
+      @if (count($slider) > 0)
+          @foreach ($slider as $item)
+              <div class="block-30 block-30-sm item" style="background-image: url('images/{{ $item->image }}');" data-stellar-background-ratio="0.5">
+                <div class="container">
+                  <div class="row align-items-center justify-content-center text-center">
+                    <div class="col-md-7">
+                    <h2 class="heading mb-5">{{ $item->title }}</h2>
+                    <p style="display: inline-block;"><a href="https://youtu.be/tn3LOXjZXRI"  data-fancybox class="ftco-play-video d-flex"><span class="play-icon-wrap align-self-center mr-4"><span class="ion-ios-play"></span></span> <span class="align-self-center">Watch Video</span></a></p>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+          @endforeach
+      @endif
     </div>
   </div>
 
@@ -22,9 +26,9 @@
         <div class="col-md-6 pr-5">
           <div class="block-48">
               <span class="block-48-text-1">Served Over</span>
-              <div class="block-48-counter ftco-number" data-number="0">0</div>
-              <span class="block-48-text-1 mb-4 d-block">Children in 0 Countries</span>
-              <p class="mb-0"><a href="#" class="btn btn-white px-3 py-2">View Our Program</a></p>
+              <div class="block-48-counter ftco-number" data-number="14500">14500</div>
+              <span class="block-48-text-1 mb-4 d-block">Children in Uganda</span>
+              <p class="mb-0"><a href="{{ url('/about') }}" class="btn btn-white px-3 py-2">View Our Program</a></p>
             </div>
         </div>
         <div class="col-md-6 welcome-text">
@@ -150,7 +154,7 @@
                 with children living with HIV, she witnessed the struggles the children undergo to
                 survive the trials of this world.
           </p>
-          <p><a href="{{ url('/about') }}" class="btn btn-success btn-hover-white py-3 px-5">Learn more about us</a></p>
+          <p><a href="{{ url('/about') }}" class="btn btn-warning btn-hover-white py-3 px-5">Learn more about us</a></p>
         </div>
         
       </div>
@@ -173,12 +177,12 @@
                 <div class="col-12 col-sm-6 col-md-6 col-lg-4 mb-4 mb-lg-0">
                   <div class="post-entry">
                     <a href="{{ url('/details') }}/{{ $article->id }}" class="mb-3 img-wrap">
-                      <img src="{{ $article->image }}" alt="Image placeholder" class="img-fluid">
+                      <img src="images/{{ $article->image }}" alt="Image placeholder" class="img-fluid">
                     </a>
                     <h3><a href="#"> {{ $article->title }} </a></h3>
-                    <span class="date mb-4 d-block text-muted">{{ $article->created_at }}</span>
-                    <p>{{ $article->content }}</p>
-                    <p><a href="{{ url('/details') }}/{{ $article->id }}" class="link-underline">Read More</a></p>
+                    {{-- <span class="date mb-4 d-block text-muted">{{ $article->created_at }}</span> --}}
+                    {{-- <p>{{ $article->content }}</p> --}}
+                    <p><a href="{{ url('/news') }}/#{{ $article->id }}" class="link-underline">Read More</a></p>
                   </div>
                 </div>
             @endforeach
